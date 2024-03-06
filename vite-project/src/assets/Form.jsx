@@ -13,6 +13,7 @@ export default function form(){
     const handleSubmit = (event) => {
         event.preventDefault();
         alert("A name was submitted: " + name);
+        console.log("A name was submitted: " + name);
 
         name.length >= 5 ? setDisplayName(true) : setDisplayName(false);
     };
@@ -29,5 +30,5 @@ export default function form(){
             </form>
             <ShowName name={name} show={displayName} />
         </div>
-    )
+    );
 }
